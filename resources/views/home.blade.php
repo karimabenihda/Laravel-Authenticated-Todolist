@@ -16,13 +16,13 @@
         height: 310px;
         padding: 30px;
     }
-    .container2{
+    .container{
         margin: auto;
         border: 1px grey solid;
-        margin-top: 10vh;
+        margin-top: 25vh;
         width: 455px;
-        height:350px;
-        padding: 10px;
+        height:400px;
+        padding: 20px;
     }
     .logout{
        position: absolute;
@@ -48,6 +48,9 @@
     .actions{
         display: flex;
     }
+    .container2{
+        margin-inline: 100px
+    }
 </style>
 </head>
 
@@ -70,7 +73,7 @@
 </form>
 </div>
 <br>
-<div class="container">
+<div class="container2">
     <h2>All your Tasks</h2>
     @foreach ($posts as $post)
     <ul>
@@ -88,14 +91,14 @@
 @endforeach
 </div>
     @else
-    <div class="container1" >
+    <div class="container" >
     <h1 class="text-center">Sign up</h1>
     <form  action="/register" method="POST">
         @csrf
         <input type="text" placeholder="name" name="name" class="form-control">
         <input type="text" placeholder="email" name="email" class="form-control">
         <input type="password" name="password" placeholder="password" class="form-control">
-        <button name="register" class="btn btn-info" style="margin-top: 18px;margin-left:13px; width: 370px; ">sign up</button><br><br>
+        <button name="register" class="btn btn-info" style="margin-top: 18px;margin-left:13px; width: 410px; ">sign up</button><br><br>
         <div style="color:rgb(32, 64, 65); text-align:center;">You already have one ? <a style="text-decoration:none;font-weight:bold;color:#0f97b2; "href="/signin">Login</a></div>
 
     </form>
